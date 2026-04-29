@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+string ReadString()
+{
+	string s1;
+	cout << "please Enter your string :\n";
+	getline(cin, s1);
+	return s1;
+}
+string UpperFirstLetterOfEachWorld(string S1)
+{
+	bool FirstLetter = true;
+	for (short i = 0; i < S1.length(); i++)
+	{
+		if (S1[i] != ' ' && FirstLetter)
+		{
+			S1[i] = toupper(S1[i]);
+		}
+		FirstLetter = (S1[i] == ' ' ? true : false);
+	}
+
+	return S1;
+}
+
+int main()
+{
+	string S1 = ReadString();
+	cout << "\n string after conversion:\n";
+
+	S1= UpperFirstLetterOfEachWorld(S1);
+	cout << S1 << endl;
+
+	system("pause>0");
+}

@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+string ReadString()
+{
+	string S1;
+	cout << "please Enter your string ?:\n";
+	getline(cin, S1);
+	return S1;
+}
+
+short countCapitalLetters(string S1)
+{
+	short Counter = 0;
+	for (short i = 0; i < S1.length(); i++)
+	{
+		if (isupper(S1[i]))
+			Counter++;
+	}
+	return Counter;
+}
+
+short CountSmallLetters(string S1)
+{
+	short Counter = 0;
+	for (short i = 0; i < S1.length(); i++)
+	{
+		if (islower(S1[i]))
+			Counter++;
+	}
+	return Counter;
+}
+
+int main()
+{
+	string S1 = ReadString();
+
+	cout << "\n String length=" << S1.length();
+
+	cout << "\n Capiltal leters =" << countCapitalLetters(S1);
+
+	cout << "\n Small leters =" << CountSmallLetters(S1);
+
+	system("pause>0");
+}

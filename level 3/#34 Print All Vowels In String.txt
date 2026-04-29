@@ -1,0 +1,39 @@
+#include<string>
+#include<iostream>
+using namespace std;
+
+string ReadString()
+{
+	string s1;
+	cout << "\n please enter the string?:";
+	getline(cin,s1);
+	return s1;
+}
+
+bool IsVowel(char ch1)
+{
+	ch1 = tolower(ch1);
+	return ((ch1 == 'a') || (ch1 == 'e') || (ch1 == 'i') || (ch1 == 'o') || (ch1 == 'u'));
+}
+
+
+void PrintAllVewls(string s1)
+{
+	cout << "\n Vowels in string are: ";
+
+	for (short i = 0; i < s1.length(); i++)
+	{
+		if (IsVowel(s1[i]))
+			cout << s1[i] << "   ";
+	}
+}
+
+int main()
+{
+	string s1 = ReadString();
+
+	PrintAllVewls(s1);
+
+	system("pause>0");
+
+}

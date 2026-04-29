@@ -1,0 +1,84 @@
+#include<iostream>
+#include<string>
+#include<iomanip>
+
+using namespace std;
+int RandomNumber(int From, int To)
+{
+	int randnum = rand() % (To - From + 1) + From;
+	return randnum;
+}
+void FillMatrixWithRandomNumbers(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandomNumber(1, 10);
+		}
+	}
+}
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "   ";
+		}
+		cout << "\n";
+	}
+}
+void MultiplyMatrix(int Matrix1[3][3], int Matrix2[3][3], int MatrixResulte[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			MatrixResulte[i][j] = Matrix1[i][j] * Matrix2[i][j];
+		}
+	}
+}
+
+void PrintMiddleRowOfMatix(int arr[3][3], short Rows, short Cols)
+{
+	short MidleRow = Rows/2;
+	for (short j = 0; j < Cols; j++)
+	{
+		cout << setw(2) << arr[MidleRow][j] << "  ";
+
+	}
+	cout << "\n";
+}
+void PrintMiddleColsOfMatix(int arr[3][3], short Rows, short Cols)
+{
+	short MidleCols = Cols / 2;
+	for (short i = 0; i<Rows;i++)
+	{
+		cout << setw(2) << arr[i][MidleCols] << "  ";
+
+	}
+	cout << "\n";
+}
+
+
+
+int main()
+{
+	srand((unsigned)time(NULL));
+
+	int Matrix1[3][3];
+
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	cout << "Matrix1:\n";
+	PrintMatrix(Matrix1, 3, 3);
+
+	cout << "\n Midle Row of Matrix1 is :\n";
+	PrintMiddleRowOfMatix(Matrix1, 3, 3);
+
+	cout << "\n Midle Cols of Matrix1 is :\n";
+	PrintMiddleColsOfMatix(Matrix1, 3, 3);
+
+	system("pause>0");
+
+}

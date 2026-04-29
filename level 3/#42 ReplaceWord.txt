@@ -1,0 +1,29 @@
+#include<string>
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+string ReplaceWordesInStringUsingFunctionBiult(string S1, string StringToplace, string ReplacTo)
+{
+	short pos = S1.find(StringToplace);
+	while (pos != std::string::npos)
+	{
+		S1 = S1.replace(pos, StringToplace.length(), ReplacTo);
+		pos = S1.find(StringToplace);
+	}
+	return S1;
+}
+
+int main()
+{
+	string S1 = "\n welcome to jorden,jorden is a nice contry\n";
+	string StringToplace = "jorden";
+	string ReplacTo = "USA";
+
+	cout << "\n\n origral string:\n" << S1;
+	cout << " \n\nString after replacs:\n";
+
+	cout  << ReplaceWordesInStringUsingFunctionBiult(S1, StringToplace, ReplacTo);
+	system("pause>0");
+}

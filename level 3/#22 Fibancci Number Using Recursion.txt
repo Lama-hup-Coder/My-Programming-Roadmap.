@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+void PrintFiboncciUsingRecurssion(short Number, int prev1, int prev2)
+{
+	int fibNumber = 0;
+	if (Number > 0)
+	{
+		fibNumber = prev1 + prev2;
+		prev2 = prev1;
+		prev1 = fibNumber;
+		cout << fibNumber << "  ";
+
+		PrintFiboncciUsingRecurssion(Number - 1, prev1, prev2);
+	}
+}
+
+
+int main()
+{
+
+	PrintFiboncciUsingRecurssion(10, 0, 1);
+
+	system("pause>0");
+}

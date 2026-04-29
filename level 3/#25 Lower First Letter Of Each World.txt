@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+string ReadString()
+{
+	string s1;
+	cout << "please Enter your string:\n";
+	getline(cin, s1);
+	return s1;
+}
+string LowerFirstLetterEachWord(string s1)
+{
+	bool IsFistLetter = true;
+	for (short i = 0; i < s1.length(); i++)
+	{
+		if (s1[i] != ' ' && IsFistLetter)
+		{
+			s1[i] = tolower(s1[i]);
+		}
+		IsFistLetter = (s1[i] == ' ' ? true : false);
+	}
+	return s1;
+}
+
+int main()
+{
+	string s1 = ReadString();
+
+	cout << "\n string after conversion;\n";
+	s1 = LowerFirstLetterEachWord(s1);
+	cout << s1 << endl;
+
+	system("pause>0");
+}

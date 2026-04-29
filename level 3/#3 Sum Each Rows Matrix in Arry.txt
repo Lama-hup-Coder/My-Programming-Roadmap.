@@ -1,0 +1,78 @@
+#include<iostream>
+#include<string>
+#include<iomanip>
+using namespace std;
+
+int RandNumber(int From, int To)
+{
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+
+void FilArrWithRandomNumbers(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			arr[i][j] = RandNumber(1, 100);
+		}
+	}
+}
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		for (short j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+int SumRow(int arr[3][3], short RowNumber, short Cols)
+{
+	int sum = 0;
+
+	for (short j = 0; j < Cols; j++)
+	{
+		sum += arr[RowNumber][j];
+	}
+	return sum;
+}
+void SumMatrixRowsInArry(int arr[3][3], int arrSum[3], short Rows, short Cols)
+{
+	for (short i = 0; i < Rows; i++)
+	{
+		arrSum[i] = SumRow(arr, i, 3);
+	}
+}
+void PrintRowsSumArray(int arrSum[3], short Rows)
+{
+	cout << "\n the followin is the sum of each Rows in the Arry:\n";
+	for (short i = 0; i < Rows; i++)
+	{
+		cout << "Rows" << i + 1 << "Sum=" << arrSum[i] << endl;
+	}
+}
+
+
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	int arr[3][3];
+	int arrSum[3];
+
+	FilArrWithRandomNumbers(arr, 3, 3);
+	
+	cout << "\n the following Random Matrix :\n";
+	PrintMatrix(arr, 3, 3);
+
+	SumMatrixRowsInArry(arr, arrSum, 3, 3);
+	PrintRowsSumArray(arrSum, 3);
+
+	
+	system("pause>0");
+
+}
