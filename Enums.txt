@@ -1,0 +1,28 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+enum color {red,green,yellow,blue};
+enum Dirction {north,south,East,West};
+enum week{sat,sun,mon,tue,wed,thu,fri};
+enum Gender {male,femal};
+enum status{single,married};
+
+int main()
+{
+	color mycolor;
+	Dirction myDirction;
+	week today;
+	Gender mysGander;
+	status mystatus;
+	mycolor = color::yellow;
+	myDirction = Dirction::south;
+	today = week::sun;
+	mysGander = Gender::femal;
+	mystatus = status::married;
+	cout << "mycolor=" << mycolor << endl;
+	cout << "myDirction=" << myDirction << endl;
+	cout << "today=" << today << endl;
+	cout << "mysGander=" << mysGander << endl;
+	cout << "mystatus=" << mystatus << endl;
+}

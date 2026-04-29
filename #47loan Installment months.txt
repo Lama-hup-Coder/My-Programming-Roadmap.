@@ -1,0 +1,19 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+	int loanAmaunt = 5000;
+	int Monthlypayment = 500;
+	cout << "enter loanAmaunt?" << endl;
+	cin >> loanAmaunt;
+	cout << "enter Monthlypayment?" << endl;
+	cin >> Monthlypayment;
+	cout << "totalMonth=" << loanAmaunt / Monthlypayment << endl;
+	return 0;
+
+}

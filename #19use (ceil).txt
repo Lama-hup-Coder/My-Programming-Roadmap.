@@ -1,0 +1,20 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+	int D = 10;
+	float pi = 3.14;
+	cout << "please enter D" << endl;
+	cin >> D;
+	float area = (pi * (D * D)) / 4;
+	cout << "area=" << ceil(area) << endl;
+
+
+	return 0;
+
+}

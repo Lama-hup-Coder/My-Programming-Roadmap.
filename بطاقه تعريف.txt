@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    string Name = "lama kahtaan";
+    short unsigned Age = 44;
+    string City = "Baghdad";
+    string Country = "Irq";
+    float MonthlySalarry=5000;
+    unsigned char Gander = 'm';
+    bool Married = true;
+
+    cout << "************************ \n";
+    cout << "Name:" << Name << endl;
+    cout << "Age:" << Age << endl;
+    cout << "city:" << City << endl;
+    cout << "country:" << Country << endl;
+    cout << "Monthly Salary:" << MonthlySalarry << endl;
+    cout << "Yearly salarry:" << MonthlySalarry * 12 << endl;
+    cout << "Gander:" << Gander << endl;
+    cout << "Married:" << Married << endl;
+    cout << "************************ \n";
+} 

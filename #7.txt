@@ -1,0 +1,19 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int Num1=1 , Num2=1;
+    cout << "pleas enter the number \n";
+    cin >> Num1;
+    cout << "pleas enter the number \n";
+    cin >> Num2;
+    cout << "Half number of " << Num1 << " is " << Num1/2 << endl;
+   
+    cout << "Half number of " << Num2 << " is " << Num2 / 2 << endl;
+    
+
+    
+}

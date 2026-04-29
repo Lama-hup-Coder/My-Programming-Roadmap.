@@ -1,0 +1,61 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+struct adress {
+    string street;
+    string housenumber;
+};
+
+struct info {
+    string email;
+    string phone;
+    adress adress;
+
+};
+struct card {
+    string Name;
+    int Age;
+    string City;
+    string Country;
+    float MonthlySalarry;
+    unsigned char Gander;
+    bool Married;
+    info info;
+};
+
+
+int main()
+{
+    card card1;
+    card1.Name = "lama kahtan";
+    card1.Age = 38;
+    card1.City = "baghdad";
+    card1.Country = "Iraq";
+    card1.Gander = 'f';
+    card1.Married = "true";
+    card1.MonthlySalarry = 5000;
+    card1.info.email ="hhhh@gmail.com";
+    card1.info.phone = "365657686";
+    card1.info.adress.housenumber = "434";
+    card1.info.adress.street = "Almansour street";
+
+    cout << "*********************" << endl;
+    cout << card1.Name << endl;
+    cout << card1.Age << endl;
+    cout << card1.Country << endl;
+    cout << card1.Gander << endl;
+    cout << card1.Married << endl;
+    cout << card1.MonthlySalarry << endl;
+    cout << "email:" << card1.info.email << endl;
+    cout <<"phone:" << card1.info.phone << endl;
+    cout << "adress:" << card1.info.adress.street << endl;
+    cout << "housenum:" << card1.info.adress.housenumber << endl;
+    cout << "**********************" << endl;
+    
+
+
+	return 0;
+
+}

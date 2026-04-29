@@ -1,0 +1,19 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+	int a = 5, d = 40;
+	cout << "enter a?" << endl;
+	cin >> a;
+	cout << "enter d?" << endl;
+	cin >> d;
+	double Rectangle_area = a * sqrt(pow(d, 2) - pow(a, 2));
+	cout << "Rectanglearea=" << Rectangle_area << endl;
+	return 0;
+
+}

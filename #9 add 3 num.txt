@@ -1,0 +1,18 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	short num1, num2, num3;
+	cout << "please enter the fiest num?" << endl;
+	cin >> num1;
+	cout << "please enter the second num?" << endl;
+	cin >> num2;
+	cout << "please enter the theard num?" << endl;
+	cin >> num3;
+	cout << num1+num2+num3 << endl;
+
+   
+}

@@ -1,0 +1,19 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int a=10 , b=20, area=1;
+	area = a * b;
+	cout << "pleas enter a?\n";
+	cin >> a;
+	cout << "please enter b?" << endl;
+	cin >> b;;
+	cout << "Arearea Rectangle=" << area << endl;
+
+
+
+
+}

@@ -1,0 +1,12 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int a=10, h=8;
+	int area = (a / 2) * h;
+	cout << "trangleArea=" << area << endl;
+	
+}

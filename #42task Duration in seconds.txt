@@ -1,0 +1,24 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+	int numberofDays = 2 ,numberofHours=5,numberofmintes=45,numberofseconds=35;
+	cout << "enter numberofDays?" << endl;
+	cin >> numberofDays;
+	cout << "enter numberofHours?" << numberofHours << endl;
+	cin >> numberofHours;
+	cout << "enter numberofmintes" << endl;
+	cin >> numberofmintes;
+	cout << "enter numberofseconds" << endl;
+	cin >> numberofseconds;
+	int totalseconds = (numberofDays * 24 * 60 * 60) + (numberofHours * 60 ^ 60) + (numberofmintes * 60) + numberofseconds;
+	cout << totalseconds<<"seconds" << endl;
+
+	return 0;
+
+}

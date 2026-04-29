@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int A = 20,B=10;
+	float pi = 3.14;
+	cout << "please enter A" << endl;
+	cin >> A;
+	cout << "please enter B" << endl;
+	cin >> B;
+	float area = (pi*B*B/4)*((2*A-B)/(2*A-B));
+	cout << "area=" << area << endl;
+	
+	
+	
+	return 0;
+
+
+}

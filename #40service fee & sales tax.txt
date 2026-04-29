@@ -1,0 +1,18 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+	float Billvalue = 100.0;
+	cout << "enter Billvalue" << endl;
+	cin >> Billvalue;
+	float totalBill = Billvalue * 1.1;
+	totalBill = totalBill * 1.16;
+	cout <<"totalBill=" << totalBill << endl;
+	return 0;
+
+}

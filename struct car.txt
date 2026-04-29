@@ -1,0 +1,55 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+
+
+#include <iostream>
+	using namespace std;
+
+	struct stowner 
+	{
+		string FullName;
+		string phone;
+	};
+	struct car {
+		string Brand;
+		string model;
+		int year;
+		stowner owner;
+	};
+
+	int main();
+	{
+		car Mycar1,Mycar2;
+		Mycar1.Brand = "BMW";
+		Mycar1.model = "X5";
+		Mycar1.year = 2000;
+		Mycar1.owner.FullName = "lama kahtaan";
+		Mycar1.owner.phone = "677888654";
+
+		Mycar2.Brand = "ford";
+		Mycar2.model = "Mustag";
+		Mycar2.year = 2022;
+		Mycar2.owner.FullName = "hhgdgu";
+		Mycar2.owner.phone = "5667422";
+
+		cout << Mycar1.Brand << " " << Mycar1.model << " " << Mycar1.year << "\n";
+		cout << Mycar1.owner.FullName << " " << Mycar2.owner.phone << " " << "\n"<<endl;
+		
+		cout << Mycar2.Brand << " " << Mycar2.model << " " << Mycar2.year << "\n";
+		cout << Mycar2.owner.FullName << " " << Mycar2.owner.phone << " " << "\n";
+	}
+
+
+
+
+
+	return 0;
+
+}

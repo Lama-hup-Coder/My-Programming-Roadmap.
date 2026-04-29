@@ -1,0 +1,20 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+
+int main()
+{
+	int totalBill=20, cashpaid=50;
+	int remainder = 0;
+	cout << "pease enter  totalBill?" << endl;
+	cin >> totalBill;
+	cout << "please enter cashpaid?" << endl;
+	cin >> cashpaid;
+	remainder = cashpaid - totalBill;
+	cout << " remainder= " << remainder << endl;
+	return 0;
+
+}

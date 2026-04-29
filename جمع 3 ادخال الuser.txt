@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+     int sum1=20;
+     int sum2=30;
+     int sum3=10;
+     int sum =sum1+sum2+sum3;
+
+    cout << "please enter 20 number"<<endl;
+    cin  >> sum1;
+    cout << "please enter 30 number" << endl;
+    cin  >> sum2;
+    cout  << "please enter 10 number" << endl;
+    cin  >> sum3;
+    cout << "______________" << endl;
+    cout << sum << endl;
+    
+}

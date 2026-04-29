@@ -1,0 +1,39 @@
+
+#include <iostream>
+using namespace std;
+enum Gander {male,female};
+enum status{single,married};
+enum favertcolor{white,red,black};
+
+int main()
+{
+    string Name;
+    short unsigned Age;
+    string City;
+    string Country;
+    float MonthlySalarry;
+    Gander myGander;
+    status mystatus;
+    favertcolor myfavertcolor;
+
+    myGander = Gander::female;
+    mystatus = status::married;
+    myfavertcolor = favertcolor::white;
+    cout << "************************ \n";
+    cout << "Name:";
+    cin >> Name;
+    cout << "Age:";
+    cin >> Age;
+    cout << "city:";
+    cin >> City;
+    cout << "country:";
+    cin >> Country;
+    cout << "Monthly Salary:";
+    cin >> MonthlySalarry;
+    cout << "Yearly salarry:";
+    cout << MonthlySalarry * 12 << endl;
+    cout << "Gander:" << myGander << endl;
+    cout << "Married:" << mystatus << endl;
+    cout << "myfavertcolor=" << myfavertcolor << endl;
+    cout << "************************ \n";
+}

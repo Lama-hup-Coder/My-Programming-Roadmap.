@@ -1,0 +1,15 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	short unsigned sum1=20, sum2=30, sum3=10;
+	short sum= sum1+sum2+sum3;
+	cout << sum1 << "+" << endl;
+	cout << sum2 << "+" << endl;
+	cout << sum3<<endl;
+	cout << "__________" << endl;
+	cout << sum << endl;
+} 

@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int L = 10;
+	float pi = 3.14;
+	cout << "please enter L" << endl;
+	cin >> L;
+	float area = (L*L)/(4*pi);
+	cout << "area=" << area << endl;
+	
+	
+	
+	return 0;
+
+
+}
