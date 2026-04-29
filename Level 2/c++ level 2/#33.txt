@@ -1,0 +1,99 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+enum enchartype { samallletter = 1, capitalletter = 2, specialcharacter = 3, Digit = 4 };
+
+int RandomNumber(int from, int to)
+{
+	int RandNum = rand() % (to - from + 1) + from;
+	return RandNum;
+}
+
+char GetCharacter(enchartype chartype)
+{
+	switch (chartype)
+	{
+	case enchartype::samallletter:
+	{
+		return char(RandomNumber(97, 122));
+		break;
+	}
+	case enchartype::capitalletter:
+	{
+		return char(RandomNumber(65, 90));
+		break;
+	}
+	case enchartype::specialcharacter:
+	{
+		return char(RandomNumber(33, 47));
+		break;
+	}
+	case enchartype::Digit:
+	{
+		return char(RandomNumber(48, 57));
+		break;
+	}
+	}
+}
+
+void PrintStringArray(string arr[100], int arrlength)
+{
+	cout << "\n Array elements:\n\n";
+	for (int i = 0; i < arrlength; i++)
+	{
+		cout << "Array[" << i << "]: ";
+		cout << arr[i] << "\n";
+	}
+	cout << "\n";
+}
+
+string GenerateWord(enchartype chartype, short length)
+{
+	string word;
+	for (int i = 1; i <= length; i++)
+	{
+		word = word + GetCharacter(chartype);
+	}
+	return word;
+}
+
+string GeneraterKey()
+{
+	string Key = " ";
+	Key = GenerateWord(enchartype::capitalletter, 4) + "_";
+	Key = Key + GenerateWord(enchartype::capitalletter, 4) + "_";
+	Key = Key + GenerateWord(enchartype::capitalletter, 4) + "_";
+	Key = Key + GenerateWord(enchartype::capitalletter, 4);
+	return Key;
+}
+
+void FillAraayWithKey(string arr[100], int arrlength)
+{
+	for (int i = 0; i < arrlength; i++)
+		arr[i] = GeneraterKey();
+}
+
+int ReadPositiveNumber(string Message) {
+	int Number = 0;
+	do {
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	string arr[100];
+	int arrlenght = 0;
+
+	arrlenght = ReadPositiveNumber("How many keys do you want to generate?:\n");
+
+	FillAraayWithKey(arr, arrlenght);
+
+	PrintStringArray(arr, arrlenght);
+	return 0;
+}
