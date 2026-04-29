@@ -1,0 +1,75 @@
+#include<iostream>
+using namespace std;
+class clsCalculater
+{
+	float _Number;
+	float _Calaulate=0;
+	float PeraviesResulte = 0;
+public:
+	float Add(float Number)
+	{
+		PeraviesResulte = _Calaulate;
+		_Calaulate += Number;
+		cout << "Resulte After Adding " << Number << " is:" << _Calaulate << endl;
+		return _Calaulate;
+	}
+
+	float Subtract(float Number)
+	{
+		PeraviesResulte = _Calaulate;
+		_Calaulate -= Number;
+		cout << "Resulte After Subtract " << Number << " is:" << _Calaulate << endl;
+		return _Calaulate;
+	}
+
+	float Divide(float Number)
+	{
+		PeraviesResulte = _Calaulate;
+		if (Number == 0)
+		{
+			Number = 1;
+			_Calaulate /= Number;
+		}
+		else
+		_Calaulate /= Number;
+		cout << "Resulte After Divide " << Number << " is:" << _Calaulate << endl;
+		return _Calaulate;
+	}
+	float Multiply(float Number)
+	{
+		PeraviesResulte = _Calaulate;
+		_Calaulate *= Number;
+		cout << "Resulte After Multiply " << Number << " is:" << _Calaulate << endl;
+		return _Calaulate;
+	}
+	void GetFinalResult()
+	{
+		//return _Calaulate;
+		cout << "fianlResulte is:" << _Calaulate<<endl;
+	}
+	void CancelLastOperation()
+	{
+		cout << "Cancel last operation\n";
+		_Calaulate=PeraviesResulte;
+	}
+	void Clear()
+	{
+		_Calaulate = 0;
+		cout << "Resulte After Clear is :" << _Calaulate << endl;
+	}
+	
+	
+};
+int main()
+{
+	clsCalculater Calculater;
+	Calculater.Add(10);
+	Calculater.Add(100);
+	Calculater.GetFinalResult();
+	Calculater.CancelLastOperation();
+	Calculater.Add(10);
+	Calculater.CancelLastOperation();
+	Calculater.Divide(2);
+	system("pause>0");
+	return 0;
+}
